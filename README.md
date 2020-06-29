@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Rails 6 basic app with Webpacker. Running on Ruby 2.7.1. 
 
-Things you may want to cover:
+My attempts here are to create nested forms and models using has_many :through and belongs_to attributes. 
 
-* Ruby version
+I have followed tutorials on how to do some of these but trying to workout the join tables and shallow routes so its following best practices. 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+Please note this is not a fully working or functional example. This is posted so anyone willing to help can see what I have done. I will be updating as we go and later sharing this example with others who are confused with this type of process. 
 
 * ...
+# nested_forms
