@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Script Locations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Setting</th>
+      <th>Project</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @script_locations.each do |script_location| %>
+      <tr>
+        <td><%= script_location.name %></td>
+        <td><%= script_location.description %></td>
+        <td><%= script_location.setting %></td>
+        <td><%= script_location.project_id %></td>
+        <td><%= link_to 'Show', script_location %></td>
+        <td><%= link_to 'Edit', edit_script_location_path(script_location) %></td>
+        <td><%= link_to 'Destroy', script_location, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Script Location', new_script_location_path %>

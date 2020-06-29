@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @script_location.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @script_location.description %>
+</p>
+
+<p>
+  <strong>Setting:</strong>
+  <%= @script_location.setting %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @script_location.project_id %>
+</p>
+
+<%= link_to 'Edit', edit_script_location_path(@script_location) %> |
+<%= link_to 'Back', script_locations_path %>

@@ -1,0 +1,2 @@
+module ScriptLocationsHelper
+end
