@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
-  resources :projects do
-    resources :script_locations, shallow: true
+  resources :projects, shallow: true do
+    resources :script_locations do
+      resources :locations
   end
-  resources :script_locations do
-    resources :locations, shallow: true
-  end
+end
 
   #resources :locations
   root 'projects#index'

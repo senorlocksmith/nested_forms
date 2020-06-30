@@ -21,6 +21,14 @@
     <%= form.check_box :approved_for_scout %>
   </div>
 
+  <div class="field">
+    
+    <%= form.collection_check_boxes :script_location_ids, ScriptLocation.all, :id, :name %>
+  </div>
+
+
+  
+
   <div class="actions">
     <%= form.submit %>
   </div>

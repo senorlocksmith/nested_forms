@@ -1,4 +1,5 @@
 class ScriptLocationsController < ApplicationController
+  before_action :get_project
   before_action :set_script_location, only: [:show, :edit, :update, :destroy]
 
   # GET /script_locations
@@ -62,6 +63,10 @@ class ScriptLocationsController < ApplicationController
   end
 
   private
+
+    def get_project
+      @project = Project.find(params[:project_id])
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_script_location
       @script_location = ScriptLocation.find(params[:id])
@@ -69,6 +74,6 @@ class ScriptLocationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def script_location_params
-      params.require(:script_location).permit(:name, :description, :setting, :project_id)
+      params.require(:script_location).permit(:name, :description, :setting, :project_id, location_ids: [])
     end
 end
