@@ -4,11 +4,9 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    if 
-      @locations = Location.where("script_location_id = ?", params[:script_location_id])
-    else
+
       @locations = Location.all
-    end
+
   end
 
   # GET /locations/1

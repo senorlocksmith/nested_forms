@@ -20,5 +20,5 @@
   <%= @script_location.project_id %>
 </p>
 
-<%= link_to 'Edit', edit_script_location_path(@script_location) %> |
-<%= link_to 'Back', script_location_path %>
+<%= link_to 'Edit', edit_project_script_location_path(@project, @script_location) %> |
+<%= link_to 'Back', project_script_locations_path(@project) %>
