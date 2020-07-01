@@ -9,10 +9,12 @@
   <strong>Approved for scout:</strong>
   <%= @location.approved_for_scout %>
 </p>
-<p>
+<p></p>
 <% @location.script_locations.each do |script_location| %>
   <%= script_location.name %>
 <% end %>
 </p>
 <%= link_to 'Edit', edit_location_path(@location) %> |
-<%= link_to 'Back', locations_path %>
+<%= link_to 'Back', location_path %>
+<p>Back should go back to Locations Index for Script Locations ID </p>
+<p>IE script_locations/ID/locations</p>

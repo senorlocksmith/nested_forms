@@ -1,4 +1,4 @@
-<%= form_with(model: [@project, script_location], local: true) do |form| %>
+<%= form_with(model: [@project, @script_location], local: true) do |form| %>
   <% if script_location.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(script_location.errors.count, "error") %> prohibited this script_location from being saved:</h2>

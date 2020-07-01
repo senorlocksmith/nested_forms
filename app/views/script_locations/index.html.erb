@@ -14,14 +14,14 @@
   </thead>
 
   <tbody>
-    <% @project.script_locations.each do |script_location| %>
+    <% @script_locations.each do |script_location| %>
       <tr>
         <td><%= script_location.name %></td>
         <td><%= script_location.description %></td>
         <td><%= script_location.setting %></td>
         <td><%= script_location.project_id %></td>
-        
-        <td><%= link_to 'Edit', edit_project_script_location_path(@project, script_location) %></td>
+        <td><%= link_to 'Show', script_location %></td>
+        <td><%= link_to 'Edit', edit_script_location_path(script_location) %></td>
         <td><%= link_to 'Destroy', [@project, script_location], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -31,3 +31,5 @@
 <br>
 
 <%= link_to 'New Script Location', new_project_script_location_path %>
+<%= link_to 'Back to Project', @project %>
+<p>Back to Project Link should take me back to project/id not projects</p>

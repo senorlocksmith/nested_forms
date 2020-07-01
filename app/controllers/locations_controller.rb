@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-
+    
       @locations = Location.all
 
   end
@@ -16,7 +16,8 @@ class LocationsController < ApplicationController
 
   # GET /locations/new
   def new
-    @location = Location.new
+    @script_location = ScriptLocation.find(params[:script_location_id])
+    @location = @script_location.locations.new
   end
 
   # GET /locations/1/edit
